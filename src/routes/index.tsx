@@ -1,17 +1,18 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Main } from "src/screens/Main";
+import { createStackNavigator } from "@react-navigation/stack";
 import { Signin } from "src/screens/Signin";
+import { Home } from "src/screens/Home";
 
-const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
 export function Routes() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Signin" component={Signin} />
-      </Tab.Navigator>
+      <Stack.Navigator headerMode="none" initialRouteName="Home">
+        <Stack.Screen name="Signin" component={Signin} />
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }

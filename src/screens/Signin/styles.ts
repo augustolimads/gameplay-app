@@ -1,12 +1,9 @@
 import styled, { css } from "styled-components/native";
 
 export const Container = styled.View`
-  ${({ theme }) => css`
     flex: 1;
     justify-content: center;
     align-items: center;
-    background-color: ${theme.colors.background};
-  `}
 `;
 
 export const Image = styled.Image.attrs({
@@ -25,8 +22,9 @@ export const Content = styled.View`
 export const Title = styled.Text`
   ${({ theme }) => css`
     color: ${theme.colors.heading};
+    font-size: ${theme.fontSizes.h1};
+    font-family: ${theme.fontWeights.titleBold};
     text-align: center;
-    font-size: 40px;
     margin-bottom: 16px;
   `}
 `;
@@ -34,8 +32,8 @@ export const Title = styled.Text`
 export const Subtitle = styled.Text`
   ${({ theme }) => css`
     color: ${theme.colors.heading};
+    font-size: ${theme.fontSizes.body};
     text-align: center;
-    font-size: 16px;
     margin-bottom: 64px;
   `}
 `;

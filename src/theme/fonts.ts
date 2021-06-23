@@ -1,16 +1,15 @@
 export const fontWeights = {
-  regular: "Lato_400Regular",
-  bold: "Lato_700Bold",
+  titleBold: "Rajdhani_700Bold",
+  titleMedium: "Rajdhani_500Medium",
+  textRegular: "Inter_400Regular",
+  textMedium: "Inter_500Medium",
 };
 
 export const fontSizes = {
-  caption: "12px",
-  button: "14px",
+  caption: "14px",
   body: "16px",
   title: "20px",
-  h5: "24px",
-  h4: "34px",
-  h3: "45px",
-  h2: "56px",
-  h1: "112px",
+  h3: "24px",
+  h2: "28px",
+  h1: "40px",
 };

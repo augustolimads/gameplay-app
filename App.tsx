@@ -4,16 +4,22 @@ import { ThemeProvider } from "styled-components/native";
 import { theme } from "src/theme";
 import { Routes } from "src/routes";
 import {
-  Lato_400Regular,
-  Lato_700Bold,
   useFonts,
-} from "@expo-google-fonts/lato";
+  Inter_400Regular,
+  Inter_500Medium,
+} from "@expo-google-fonts/inter";
+import {
+  Rajdhani_500Medium,
+  Rajdhani_700Bold,
+} from "@expo-google-fonts/rajdhani";
 import AppLoading from "expo-app-loading";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    Lato_400Regular,
-    Lato_700Bold,
+    Inter_400Regular,
+    Inter_500Medium,
+    Rajdhani_500Medium,
+    Rajdhani_700Bold,
   });
 
   if (!fontsLoaded) {
