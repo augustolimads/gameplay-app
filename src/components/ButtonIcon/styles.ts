@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components/native";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { TouchableOpacityProps } from "react-native";
+import { RectButton } from "react-native-gesture-handler";
 
-export const Container = styled.TouchableOpacity`
+export const Container = styled(RectButton)`
   ${({ theme }) => css`
     width: 100%;
     height: 56px;

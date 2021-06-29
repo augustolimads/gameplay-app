@@ -1,8 +1,8 @@
 import React from "react";
 import * as S from "./styles";
-import { TouchableOpacityProps } from "react-native";
+import { RectButtonProps } from "react-native-gesture-handler";
 
-type Props = TouchableOpacityProps & {
+type Props = RectButtonProps & {
   title: string;
 };
 

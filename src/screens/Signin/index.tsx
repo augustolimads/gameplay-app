@@ -3,8 +3,15 @@ import * as S from "./styles";
 import IllustrationImg from "src/assets/illustration.png";
 import { ButtonIcon } from "src/components/ButtonIcon";
 import { Background } from "src/components/Background";
+import { useNavigation } from "@react-navigation/native";
 
 export function Signin() {
+  const navigation = useNavigation();
+
+  function handleSignIn() {
+    navigation.navigate("Home");
+  }
+
   return (
     <Background>
       <S.Container>
@@ -17,7 +24,7 @@ export function Signin() {
             Crie grupos para jogar seus games {`\n`}
             favoritos com seus amigos
           </S.Subtitle>
-          <ButtonIcon title="Entrar com Discord" activeOpacity={0.7} />
+          <ButtonIcon title="Entrar com Discord" onPress={handleSignIn} />
         </S.Content>
       </S.Container>
     </Background>
