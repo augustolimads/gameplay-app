@@ -2,30 +2,39 @@ import React from "react";
 import { Spacer } from "src/components/Spacer";
 import * as S from "./styles";
 import { categories } from "src/utils/categories.mock";
+import { Category } from "../Category";
+import { SvgProps } from "react-native-svg";
 
-type CardProps = {
-  item: {
-    name: string;
-  };
+type CategoryProps = {
+  title: string;
+  icon: React.FC<SvgProps>;
+  checked?: boolean;
 };
 
-export function CategoryList() {
-  const HorizontalListCard = ({ item }) => (
-    <S.Card>
-      <S.CardTitle>{item.name}</S.CardTitle>
-    </S.Card>
-  );
+type Props = {
+  categorySelected: string;
+  setCategory: (categoryId: string) => void;
+};
 
-  const Separator = () => <Spacer isHorizontal size={4} />;
+export function CategorySelect({ categorySelected, setCategory }: Props) {
+  const Separator = () => <Spacer isHorizontal size={6} />;
   return (
     <S.Container>
       <S.HorizontalList
         data={categories}
-        renderItem={HorizontalListCard}
+        renderItem={({ item }: CategoryProps) => (
+          <Category
+            title={item.title}
+            icon={item.icon}
+            checked={item.id === categorySelected}
+            onPress={() => setCategory(item.id)}
+          />
+        )}
         keyExtractor={(item) => item.id}
         horizontal
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{ paddingRight: 40 }}
+        ItemSeparatorComponent={Separator}
       />
     </S.Container>
   );
