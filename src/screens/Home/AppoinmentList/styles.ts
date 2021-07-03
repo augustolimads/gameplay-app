@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components/native";
 
 export const Container = styled.View`
-  padding: 0 24px;
   margin-top: 40px;
 `;
 
@@ -10,6 +9,7 @@ export const ListHeader = styled.View`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  padding: 0px 24px;
 `;
 
 export const HeaderTitle = styled.Text`
@@ -28,4 +28,6 @@ export const HeaderTotal = styled.Text`
   `}
 `;
 
-export const FlatList = styled.FlatList``;
+export const FlatList = styled.FlatList`
+  padding-left: 24px;
+`;

@@ -13,15 +13,13 @@ export function AppointmentList() {
         <S.HeaderTitle>Partidas agendadas</S.HeaderTitle>
         <S.HeaderTotal>Total 6</S.HeaderTotal>
       </S.ListHeader>
-      <Appointment data={appointments[0]} />
-      {/* <S.FlatList
-        // ListHeaderComponent={}
+      <S.FlatList
         data={appointments}
         renderItem={({ item }) => <Appointment data={item} />}
         keyExtractor={(item) => item.id}
         showsVerticalScrollIndicator={false}
         ItemSeparatorComponent={Separator}
-      /> */}
+      />
     </S.Container>
   );
 }

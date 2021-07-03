@@ -4,11 +4,11 @@ export const appointments = [
     guild: {
       id: "1",
       name: "lendários",
-      icon: null,
+      icon: "https://reactnative.dev/img/tiny_logo.png",
       owner: true,
     },
     description: "titlo",
-    category: "categoria",
+    category: "Ranqueada",
     date: "01/01/2021",
   },
   {
@@ -16,11 +16,11 @@ export const appointments = [
     guild: {
       id: "1",
       name: "lendários",
-      icon: null,
+      icon: "https://reactnative.dev/img/tiny_logo.png",
       owner: false,
     },
     description: "titlo",
-    category: "categoria",
+    category: "Diversão",
     date: "01/01/2021",
   },
 ];

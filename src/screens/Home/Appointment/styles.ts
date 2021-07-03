@@ -9,17 +9,21 @@ export const Container = styled(RectButton)`
   flex-direction: row;
 `;
 
-export const Icon = styled.View`
+export const Image = styled.Image`
   margin-right: 20px;
-  border: 1px;
   width: 80px;
   height: 80px;
+  border-radius: 12px;
 `;
 
 export const Content = styled.View`
-  padding: 4px 8px;
-  justify-content: space-between;
-  flex: 1;
+  ${({ theme }) => css`
+    padding: 4px 24px 12px 8px;
+    justify-content: space-between;
+    flex: 1;
+    border-bottom-width: 1px;
+    border-color: ${theme.colors.secondary70};
+  `}
 `;
 
 export const Header = styled.View`
@@ -37,7 +41,7 @@ export const GuildName = styled.Text`
 export const Category = styled.Text`
   ${({ theme }) => css`
     font-family: ${theme.fontWeights.textRegular};
-    color: ${theme.colors.heading};
+    color: ${theme.colors.highlight};
     font-size: ${theme.fontSizes.caption};
   `}
 `;
@@ -54,9 +58,9 @@ export const DateLabel = styled.Text`
   `}
 `;
 export const OwnerLabel = styled.Text`
-  ${({ theme }) => css`
+  ${({ theme, isOwner }) => css`
     font-family: ${theme.fontWeights.textMedium};
-    color: ${theme.colors.primary};
+    color: ${isOwner ? theme.colors.primary : theme.colors.on};
     font-size: ${theme.fontSizes.caption};
   `}
 `;
@@ -74,10 +78,10 @@ export const DateIcon = styled(FontAwesome).attrs(({ theme }) => ({
   margin-right: 8px;
 `;
 
-export const PersonIcon = styled(Ionicons).attrs(({ theme }) => ({
+export const PersonIcon = styled(Ionicons).attrs(({ theme, isOwner }) => ({
   name: "md-person-sharp",
   size: 16,
-  color: theme.colors.primary,
+  color: isOwner ? theme.colors.primary : theme.colors.on,
 }))`
   margin-right: 8px;
 `;

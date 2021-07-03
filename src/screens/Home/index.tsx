@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Background } from "src/components/Background";
-import { CategorySelect } from "./CategorySelect";
+import { CategorySelect } from "src/components/CategorySelect";
 import * as S from "./styles";
 import { HomeHeader } from "./HomeHeader";
 import { AppointmentList } from "./AppoinmentList";
