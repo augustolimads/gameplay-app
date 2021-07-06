@@ -1,8 +1,15 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 import { Spacer } from "src/components/Spacer";
 import * as S from "./styles";
 
 export function HomeHeader() {
+  const navigation = useNavigation();
+
+  function handleCreateNewAppointment() {
+    navigation.navigate("NewAppointment");
+  }
+
   return (
     <S.Header>
       <S.AvatarWrapper>
@@ -17,7 +24,7 @@ export function HomeHeader() {
         <S.Text>Hoje é dia de vitória</S.Text>
       </S.Group>
       <Spacer flex={1} />
-      <S.Button>
+      <S.Button onPress={handleCreateNewAppointment}>
         <S.IconPlus />
       </S.Button>
     </S.Header>

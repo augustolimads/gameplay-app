@@ -6,7 +6,6 @@ export const Container = styled.View``;
 export const HorizontalList = styled.FlatList`
   flex: none;
   padding: 0px 20px;
-  margin-top: 40px;
 `;
 
 export const Card = styled(RectButton)`
