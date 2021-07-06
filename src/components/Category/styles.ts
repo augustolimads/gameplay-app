@@ -16,7 +16,7 @@ export const Card = styled(RectButton)`
 export const Content = styled.View`
   ${({ theme, checked }) => css`
     opacity: ${checked ? 1 : 0.4};
-    border: 2px;
+    border: 1px;
     background-color: ${theme.colors.secondary60};
     border-color: ${theme.colors.secondary30};
     justify-content: space-between;
